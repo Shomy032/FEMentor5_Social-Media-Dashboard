@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter' ,  sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 3px;
+  bottom: 2.5px;
+  background-color: #1e202a;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: tralateX(17px);
+  transform: translateX(17px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #262936), color-stop(10%, #1e202a));
+  background-image: linear-gradient(180deg, #262936 10%, #1e202a 10%);
+}
+
+.wrap {
+  position: relative;
+  background-color: transparent;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.wrap .naslov {
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.wrap .naslov h1 {
+  font-size: 27px;
+  color: white;
+  font-weight: 700;
+}
+
+.wrap .naslov h2 {
+  font-size: 15px;
+  color: #a1a1a1;
+}
+
+.dark-mode {
+  border-top: 1.5px solid #a1a1a1;
+  padding-top: 1rem;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dark-mode h2 {
+  font-size: 15px;
+  color: #a1a1a1;
+}
+
+.card {
+  width: 320px;
+  height: 200px;
+  margin: 2rem auto;
+  background-color: #252a41;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  border-top: 5px solid #378fe6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.card .prvi, .card .drugi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #a1a1a1;
+}
+
+.card .drugi {
+  color: white;
+}
+
+.card span {
+  margin-left: 0.5rem;
+  font-size: 15px;
+}
+
+.card i {
+  font-size: 27px;
+  color: #378fe6;
+}
+
+.card .insta {
+  color: #fdc468;
+  display: block;
+  background: -webkit-linear-gradient(#fdc468, #df4996);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card .chevron {
+  font-size: 15px;
+  color: #3eda82;
+}
+
+.card .brojke {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card .brojke .fols {
+  font-size: 20px;
+  font-weight: 300;
+  font-size: 300;
+  color: #a1a1a1;
+  margin-top: 0;
+}
+
+.card .brojke .fol-count {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 0;
+}
+
+.card:hover {
+  background-color: #2e3552;
+}
+
+.card3 {
+  border-top: 5px solid #fdc468;
+}
+
+.card4 {
+  border-top: 5px solid #c4032a;
+}
+
+.card4 i {
+  color: #c4032a;
+}
+
+.card4 .chevron {
+  color: #c4032a;
+}
+
+.naslov2 {
+  font-size: 27px;
+  color: white;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.kartice {
+  width: 320px;
+  height: 125px;
+  margin: 2rem auto;
+  background-color: #252a41;
+  border-radius: 0.4rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.kartice .prvi1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.kartice .drugi2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.kartice .chev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.kartice .chev .procenat {
+  margin-left: 0.5rem;
+  font-size: 15px;
+  color: #3eda82;
+}
+
+.kartice .broj {
+  font-size: 27px;
+  color: white;
+  font-weight: 700;
+}
+
+.kartice h2 {
+  font-size: 15px;
+  color: #a1a1a1;
+}
+
+.kartice i {
+  font-size: 27px;
+  color: #378fe6;
+}
+
+.kartice .ch {
+  font-size: 15px;
+  color: #3eda82;
+}
+
+.kartice .fa-instagram {
+  color: #fdc468;
+  display: block;
+  background: -webkit-linear-gradient(#fdc468, #df4996);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.kartice:hover {
+  background-color: #2e3552;
+}
+
+.kar2 .chev i, .kar2 .chev .procenat {
+  color: #c4032a;
+}
+
+.kar7 i, .kar8 i {
+  color: #c4032a;
+}
+
+.kar7 .chev i, .kar7 .chev .procenat, .kar8 .chev i, .kar8 .chev .procenat {
+  color: #c4032a;
+}
+/*# sourceMappingURL=style.css.map */

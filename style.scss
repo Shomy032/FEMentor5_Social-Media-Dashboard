@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter' ,  sans-serif;
+
+  box-sizing: border-box;
+}
+
+  // za text boje
+$bela: white;
+$siva: rgb(161, 161, 161);
+$crna: black;
+// font size za sve
+$sivi-text: 15px;
+$naslov-text: 27px ;
+$brojke: 50px;
+//boje za pozadine
+$dark-body: hsl(230, 17%, 14%);
+$card-bg: hsl(228, 28%, 20%);
+$card-hover:  hsl(228, 28%, 25%);
+//ikonice boje
+$svetlo-plava: hsl(210, 78%, 56%);
+$zelena: hsl(146, 68%, 55%);
+$crvena: hsl(348, 97%, 39%);
+//font-weight
+$tanki: 300;
+$debeli: 700;
+@import 'toggle-button';
+
+body{
+  background-image: linear-gradient(180deg , hsl(229, 18%, 18%) 10%,$dark-body 10%);
+}
+
+
+
+.wrap {
+  position: relative;
+background-color: transparent;
+width: 90%;
+margin: 1rem auto;
+  .naslov{
+text-align: left;
+margin: 1rem 0;
+    h1{
+      font-size: $naslov-text;
+      color: $bela;
+      font-weight: $debeli;
+    }
+    h2{
+      font-size: $sivi-text;
+      color: $siva;
+    }
+  }
+}
+.dark-mode{
+  border-top: 1.5px solid $siva;
+padding-top: 1rem;
+margin: 1rem 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+  h2{
+    font-size: $sivi-text;
+      color: $siva;
+  }
+}
+
+
+
+
+
+.card{
+  width: 320px;
+  height: 200px; //2. card is 100px
+  margin: 2rem auto;
+  background-color: $card-bg;
+ 
+  transition: 300ms;
+  cursor: pointer;
+
+border-radius: 0.4rem;
+border-top: 5px solid $svetlo-plava;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+ 
+ 
+  .prvi, .drugi{
+    display: flex;
+    align-items: center;
+    color: $siva;
+  }
+  .drugi{
+    color: $bela;
+  }
+span{
+  margin-left: 0.5rem;
+  font-size: $sivi-text;
+}
+i{
+  font-size: $naslov-text;
+  color: $svetlo-plava;
+}
+.insta{
+  color: hsl(37, 97%, 70%);
+  display: block;
+  background: -webkit-linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.chevron{
+  font-size: $sivi-text;
+  color: $zelena;
+  
+}
+.brojke{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .fols{
+    font-size: 20px;
+    font-weight: $tanki;
+    font-size: $tanki;
+    color: $siva;
+    
+    margin-top: 0;
+    }
+    .fol-count{
+      font-size: $brojke;
+      color: $bela;
+      margin-bottom: 0;
+    }
+
+}
+
+}
+.card:hover{
+  background-color: $card-hover;
+}
+
+// 3. kartica (za insta);
+.card3{
+  border-top: 5px solid hsl(37, 97%, 70%);
+}
+// youtube karcica (4.)
+.card4{
+  border-top: 5px solid $crvena;
+  i{
+    color: $crvena;
+  }
+  .chevron{
+    color: $crvena;
+  }
+}
+
+.naslov2{
+  font-size: $naslov-text;
+  color: $bela;
+  font-weight: $debeli;
+
+  margin-top: 3rem ;
+  margin-bottom: 1rem;
+}
+
+.kartice{
+  width: 320px;
+  height: 125px; //1. card is 200px
+  margin: 2rem auto;
+  background-color: $card-bg;
+ 
+  border-radius: 0.4rem;
+  transition: 300ms;
+  cursor: pointer;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+
+padding: 1rem 3rem;
+
+.prvi1{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.drugi2{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chev{
+  display: flex;
+  .procenat{
+    margin-left: 0.5rem;
+    font-size: $sivi-text;
+    color: $zelena;
+  }
+}
+.broj{
+  font-size: $naslov-text;
+      color: $bela;
+      font-weight: $debeli;
+}
+h2{
+  font-size: $sivi-text;
+  color: $siva;
+}
+i{
+  font-size: $naslov-text;
+  color: $svetlo-plava;
+}
+.ch{
+  font-size: $sivi-text;
+  color: $zelena;
+}
+.fa-instagram{
+  color: hsl(37, 97%, 70%);
+  display: block;
+  background: -webkit-linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+}
+.kartice:hover{
+  
+    background-color: $card-hover;
+  
+}
+.kar2{
+
+  .chev{
+    i,.procenat{
+ color: $crvena;
+    }
+   
+  }
+}
+.kar7 , .kar8{
+  i {
+    color: $crvena;
+  }
+  .chev{
+    i , .procenat{
+      color: $crvena;
+    }
+  }
+}
