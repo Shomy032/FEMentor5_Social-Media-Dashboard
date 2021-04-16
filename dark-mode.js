@@ -8,15 +8,31 @@ function myF(){
   var card = document.querySelectorAll(".card");
   var kartice = document.querySelectorAll(".kartice");
   
+  //variable for % for gradient
+  var grad = 220;
+
+  // first try , but its not working ,so i added pixels to gradient not % ...
+
+  //  document.addEventListener('resize', () =>{
+  // if(window.innerWidth < 1500){
+  //       grad = 100;
+  //      console.log(grad);
+  //    } 
+  //  });
+  
+   
+  
+  
+
     //if the checkbox state is changed, run a funtion
     check.addEventListener("change", function() {
       //check if the checkbox is checked or not
       if (check.checked) {
         nodark(); //if the checkbox is checked, run this funtion
-        console.log('aa');
+        console.log('dark-mode ON');
       } else {
         darkmode(); //else run this funtion
-        console.log('bb');
+        console.log('light-mode ON');
       }
     });
   
@@ -38,12 +54,15 @@ function myF(){
     naslov2.style.color = 'black';
     naslov.style.opacity = '0.8' ;
     naslov2.style.opacity = '0.8';
-    body.style.backgroundImage = 'none';
-    body.style.backgroundColor = '#ede8e8';
+    // body.style.backgroundImage = 'linear-gradient(180deg , hsl(229, 18%, 18%) 30%,hsl(230, 17%, 14%) 30%)';
+    body.style.backgroundImage = `linear-gradient(180deg , #edf2ef ${grad}px,white ${grad}px)`;
+    // body.style.backgroundColor = '#ede8e8';
     for (let i = 0; i < card.length; ++i) {
-      card[i].style.backgroundColor = 'white'; 
+      card[i].style.backgroundColor = '#f2f7f4';
+      card[i].classList.add("cardd"); 
       for (let i = 0; i < kartice.length; ++i) {
-        kartice[i].style.backgroundColor = 'white'; 
+        kartice[i].style.backgroundColor = '#f2f7f4'; 
+        kartice[i].classList.add("karticee");
   };
   }
 }
@@ -59,13 +78,16 @@ function myF(){
   naslov2.style.color = 'white';
   naslov.style.opacity = '1' ;
     naslov2.style.opacity = '1';
-  body.style.backgroundImage = 'none';
-  body.style.backgroundColor = 'hsl(229, 18%, 18%)';
+  // body.style.backgroundImage = 'linear-gradient(180deg , gray 30%,white 30%)';
+  body.style.backgroundImage = `linear-gradient(180deg , hsl(229, 18%, 18%) ${grad}px,hsl(230, 17%, 14%) ${grad}px)`;
+  // body.style.backgroundColor = 'hsl(229, 18%, 18%)';
   for (let i = 0; i < card.length; ++i) {
     card[i].style.backgroundColor = 'hsl(228, 28%, 20%)'; 
+    card[i].classList.remove("cardd");
 };
 for (let i = 0; i < kartice.length; ++i) {
   kartice[i].style.backgroundColor = 'hsl(228, 28%, 20%)'; 
+  kartice[i].classList.remove("karticee");
 };
 
 }

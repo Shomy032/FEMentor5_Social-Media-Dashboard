@@ -30,8 +30,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
-  background-image: linear-gradient(to right, #378fe6, #3eda82);
+  background-color: #bbbbbb;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -49,12 +48,9 @@
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #2196F3;
-          box-shadow: 0 0 1px #2196F3;
+  background-color: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
 }
 
 input:checked + .slider:before {
@@ -74,6 +70,7 @@ input:checked + .slider:before {
 body {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #262936), color-stop(10%, #1e202a));
   background-image: linear-gradient(180deg, #262936 10%, #1e202a 10%);
+  min-height: 100vh;
 }
 
 .wrap {
@@ -119,7 +116,7 @@ body {
   color: #a1a1a1;
 }
 
-.card {
+.card, .cardd {
   width: 320px;
   height: 200px;
   margin: 2rem auto;
@@ -144,7 +141,7 @@ body {
           justify-content: space-evenly;
 }
 
-.card .prvi, .card .drugi {
+.card .prvi, .card .drugi, .cardd .prvi, .cardd .drugi {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,25 +151,25 @@ body {
   color: #a1a1a1;
 }
 
-.card .drugi {
+.card .drugi, .cardd .drugi {
   color: white;
 }
 
-.card .drugi span {
+.card .drugi span, .cardd .drugi span {
   color: #3eda82;
 }
 
-.card span {
+.card span, .cardd span {
   margin-left: 0.5rem;
   font-size: 15px;
 }
 
-.card i {
+.card i, .cardd i {
   font-size: 27px;
   color: #378fe6;
 }
 
-.card .insta {
+.card .insta, .cardd .insta {
   color: #fdc468;
   display: block;
   background: -webkit-linear-gradient(#fdc468, #df4996);
@@ -180,12 +177,12 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.card .chevron {
+.card .chevron, .cardd .chevron {
   font-size: 15px;
   color: #3eda82;
 }
 
-.card .brojke {
+.card .brojke, .cardd .brojke {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,7 +198,7 @@ body {
           justify-content: center;
 }
 
-.card .brojke .fols {
+.card .brojke .fols, .cardd .brojke .fols {
   font-size: 20px;
   font-weight: 300;
   font-size: 300;
@@ -209,23 +206,40 @@ body {
   margin-top: 0;
 }
 
-.card .brojke .fol-count {
+.card .brojke .fol-count, .cardd .brojke .fol-count {
   font-size: 50px;
   color: white;
   margin-bottom: 0;
 }
 
-.card .brojke .crna {
+.card .brojke .crna, .cardd .brojke .crna {
   color: black;
   opacity: 0.8;
 }
 
 .card:hover {
-  background-color: #2e3552;
+  background-color: #323958 !important;
+}
+
+.cardd:hover {
+  background-color: #e0dede !important;
 }
 
 .card3 {
-  border-top: 5px solid #fdc468;
+  border-top: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.card3:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: -webkit-gradient(linear, right top, left top, from(#fdc468), to(#df4996));
+  background: linear-gradient(to left, #fdc468, #df4996);
+  top: 0px;
+  left: 0;
 }
 
 .card4 {
@@ -252,7 +266,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.kartice {
+.kartice, .karticee {
   width: 320px;
   height: 125px;
   margin: 2rem auto;
@@ -277,7 +291,7 @@ body {
   padding: 1rem 3rem;
 }
 
-.kartice .prvi1 {
+.kartice .prvi1, .karticee .prvi1 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,7 +304,7 @@ body {
           justify-content: space-between;
 }
 
-.kartice .drugi2 {
+.kartice .drugi2, .karticee .drugi2 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,45 +317,45 @@ body {
           justify-content: space-between;
 }
 
-.kartice .chev {
+.kartice .chev, .karticee .chev {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.kartice .chev .procenat {
+.kartice .chev .procenat, .karticee .chev .procenat {
   margin-left: 0.5rem;
   font-size: 15px;
   color: #3eda82;
 }
 
-.kartice .broj {
+.kartice .broj, .karticee .broj {
   font-size: 27px;
   color: white;
   font-weight: 700;
 }
 
-.kartice .crna {
+.kartice .crna, .karticee .crna {
   color: black;
   opacity: 0.8;
 }
 
-.kartice h2 {
+.kartice h2, .karticee h2 {
   font-size: 15px;
   color: #a1a1a1;
 }
 
-.kartice i {
+.kartice i, .karticee i {
   font-size: 27px;
   color: #378fe6;
 }
 
-.kartice .ch {
+.kartice .ch, .karticee .ch {
   font-size: 15px;
   color: #3eda82;
 }
 
-.kartice .fa-instagram {
+.kartice .fa-instagram, .karticee .fa-instagram {
   color: #fdc468;
   display: block;
   background: -webkit-linear-gradient(#fdc468, #df4996);
@@ -350,7 +364,11 @@ body {
 }
 
 .kartice:hover {
-  background-color: #2e3552;
+  background-color: #323958 !important;
+}
+
+.karticee:hover {
+  background-color: #e0dede !important;
 }
 
 .kar2 .chev i, .kar2 .chev .procenat {
@@ -363,5 +381,68 @@ body {
 
 .kar7 .chev i, .kar7 .chev .procenat, .kar8 .chev i, .kar8 .chev .procenat {
   color: #c4032a;
+}
+
+@media screen and (min-width: 1500px) {
+  .card {
+    margin: 0;
+  }
+  .kartice {
+    margin: 0;
+  }
+  .followers {
+    width: 1400px;
+    margin: 1rem auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: 200px;
+        grid-template-rows: 200px;
+    grid-gap: 40px;
+  }
+  .today {
+    width: 1400px;
+    margin: 0rem auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: 125px 125px;
+        grid-template-rows: 125px 125px;
+    grid-gap: 40px;
+  }
+  .naslov2 {
+    margin: 2rem 0;
+  }
+  body {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #262936), color-stop(30%, #1e202a));
+    background-image: linear-gradient(180deg, #262936 30%, #1e202a 30%);
+    overflow: hidden;
+  }
+  .desktop-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 2rem;
+  }
+  .dark-mode {
+    margin: 0;
+    border: none;
+    outline: none;
+    padding: 0;
+  }
+  .dark-mode .switch {
+    margin: 0 2rem;
+  }
+  .naslov2 {
+    margin-left: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -30,6 +30,9 @@ $debeli: 700;
 
 body{
   background-image: linear-gradient(180deg , hsl(229, 18%, 18%) 10%,$dark-body 10%);
+
+  min-height: 100vh;
+  
 }
 
 
@@ -70,7 +73,7 @@ align-items: center;
 
 
 
-.card{
+.card , .cardd{
   width: 320px;
   height: 200px; //2. card is 100px
   margin: 2rem auto;
@@ -150,13 +153,37 @@ i{
 //   background-color: white;
 // }
 
+// za sad amo radi na dark modu, potreban je jos /// jedan hover nekako za light mode... bez ovoga ///  !important ne radi
 .card:hover{
-  background-color: $card-hover;
-}
+  background-color:lighten($card-bg, 7%)!important;
+  // background-color:lighten($card-bg, 50%)!important;
+  // background-color:$card-hover!important;
 
+  //color: lighten($card-bg, 10%);
+}
+.cardd:hover{
+  background-color: rgb(224, 222, 222) !important;;
+}
 // 3. kartica (za insta);
 .card3{
-  border-top: 5px solid hsl(37, 97%, 70%);
+  border-top: none;
+  position: relative;
+  // overflow: hidden;
+  // -moz-box-sizing: border-box;
+  // box-sizing: border-box;
+
+  overflow: hidden;
+}
+.card3:before {
+  content:'';
+  position:absolute;
+  width:100%;
+  height:5px;
+  background:linear-gradient(to left,hsl(37, 97%, 70%) , hsl(329, 70%, 58%) );
+  top:0px;
+  left:0;
+
+ 
 }
 // youtube karcica (4.)
 .card4{
@@ -184,7 +211,7 @@ i{
   margin-bottom: 1rem;
 }
 
-.kartice{
+.kartice , .karticee{
   width: 320px;
   height: 125px; //1. card is 200px
   margin: 2rem auto;
@@ -254,8 +281,11 @@ i{
 }
 .kartice:hover{
   
-    background-color: $card-hover;
+    background-color: lighten($card-bg, 7%)!important;
   
+}
+.karticee:hover{
+  background-color: rgb(224, 222, 222) !important;;
 }
 .kar2{
 
@@ -276,3 +306,6 @@ i{
     }
   }
 }
+
+@import 'desktop';
+
