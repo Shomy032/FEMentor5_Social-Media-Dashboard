@@ -95,10 +95,14 @@ border-top: 5px solid $svetlo-plava;
   }
   .drugi{
     color: $bela;
+    span{
+      color: $zelena;
+    }
   }
 span{
   margin-left: 0.5rem;
   font-size: $sivi-text;
+  
 }
 i{
   font-size: $naslov-text;
@@ -134,10 +138,18 @@ i{
       color: $bela;
       margin-bottom: 0;
     }
+    .crna{
+      color: $crna;
+      opacity: 0.8;
+    }
 
 }
 
 }
+// .card-light{
+//   background-color: white;
+// }
+
 .card:hover{
   background-color: $card-hover;
 }
@@ -154,6 +166,12 @@ i{
   }
   .chevron{
     color: $crvena;
+    
+  }
+  .drugi{
+    span{
+      color: $crvena;
+    }
   }
 }
 
@@ -207,6 +225,10 @@ padding: 1rem 3rem;
   font-size: $naslov-text;
       color: $bela;
       font-weight: $debeli;
+}
+.crna{
+  color: $crna;
+  opacity: 0.8;
 }
 h2{
   font-size: $sivi-text;

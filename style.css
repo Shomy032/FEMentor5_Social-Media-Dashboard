@@ -158,6 +158,10 @@ body {
   color: white;
 }
 
+.card .drugi span {
+  color: #3eda82;
+}
+
 .card span {
   margin-left: 0.5rem;
   font-size: 15px;
@@ -211,6 +215,11 @@ body {
   margin-bottom: 0;
 }
 
+.card .brojke .crna {
+  color: black;
+  opacity: 0.8;
+}
+
 .card:hover {
   background-color: #2e3552;
 }
@@ -228,6 +237,10 @@ body {
 }
 
 .card4 .chevron {
+  color: #c4032a;
+}
+
+.card4 .drugi span {
   color: #c4032a;
 }
 
@@ -306,6 +319,11 @@ body {
   font-size: 27px;
   color: white;
   font-weight: 700;
+}
+
+.kartice .crna {
+  color: black;
+  opacity: 0.8;
 }
 
 .kartice h2 {

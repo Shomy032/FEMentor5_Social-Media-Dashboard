@@ -21,8 +21,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(to right,hsl(210, 78%, 56%) ,hsl(146, 68%, 55%));
+  // bgi ne radi toggle onda mora da bude color  /// jbg
+     background-image: linear-gradient(to right,hsl(210, 78%, 56%) ,hsl(146, 68%, 55%));
+    // // samo ovako radi kako treba
+    // background-color: rgb(161, 161, 161);
   transition: .4s;
+  //boja pravi problem za sad
+  //nece da se promeni ako je
+  //dugme iskljuceno jbg..
 }
 
 .slider:before {
@@ -43,6 +49,7 @@ input:checked + .slider {
 
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
+ 
 }
 
 input:checked + .slider:before {
